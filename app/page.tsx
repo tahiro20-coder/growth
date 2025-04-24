@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleCapture = async (imageBase64: string) => {
     try {
-      const res = await fetch('http://127.0.0.1:5000/Classify', {
+      const res = await fetch('http://growth-azure.vercel.app/api/Classify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
