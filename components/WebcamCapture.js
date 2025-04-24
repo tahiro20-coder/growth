@@ -42,7 +42,7 @@ const WebcamCapture = ({ onCapture }) => {
             disabled={!ready}
             className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
           >
-            {ready ? 'Take Photo'}
+            {ready ? 'Take Photo' : 'Loading...'}
           </button>
         </>
       ) : (
