@@ -27,7 +27,9 @@ export default function Home() {
   return (
     <main className="p-8 flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-4">Webcam Classifier</h1>
+      
       <WebcamCapture onCapture={handleCapture} />
+
       {loading && <p className="mt-4 text-yellow-600">Predicting...</p>}
 
       {result && (
