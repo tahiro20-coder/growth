@@ -5,8 +5,8 @@ import React, { useRef, useState, useCallback } from 'react'
 import Webcam from 'react-webcam'
 
 const videoConstraints = {
-  width: 400,
-  facingMode: 'user',
+    width: 400,
+    facingMode: { exact: 'environment' },
 }
 
 const WebcamCapture = ({ onCapture }) => {
