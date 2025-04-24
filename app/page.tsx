@@ -6,7 +6,7 @@ import { useState } from 'react'
 export default function Home() {
   const [result, setResult] = useState(null)
 
-  const handleCapture = async (imageBase64) => {
+  const handleCapture = async (imageBase64: string) => {
     try {
       const res = await fetch('http://127.0.0.1:5000/predict', {
         method: 'POST',
