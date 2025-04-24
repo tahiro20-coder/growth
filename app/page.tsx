@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 export default function Home() {
   const [result, setResult] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleCapture = async (imageBase64: string) => {
     try {
@@ -27,9 +28,11 @@ export default function Home() {
     <main className="p-8 flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-4">Webcam Classifier</h1>
       <WebcamCapture onCapture={handleCapture} />
+      {loading && <p className="mt-4 text-yellow-600">Predicting...</p>}
+
       {result && (
-        <p className="mt-4 text-lg font-semibold">
-          Prediction: <span className="text-blue-600">{result}</span>
+        <p className="mt-4 text-lg font-semibold text-green-600">
+          Prediction: <span className="font-bold">{result}</span>
         </p>
       )}
     </main>
