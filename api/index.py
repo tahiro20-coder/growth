@@ -32,4 +32,4 @@ def internal_server_error(error):
     return response, 500
 
 
-api.add_resource(Recycle, '/api/Classify')
+api.add_resource(Classify, '/api/Classify')
